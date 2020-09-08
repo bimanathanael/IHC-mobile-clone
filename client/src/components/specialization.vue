@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-white pl-5 pb-3 pt-3 borderBot">
+  <div @click="toDoctorList()" class="row bg-white pl-5 pb-3 pt-3 borderBot">
       <div class="col-9">
         <h5 class="card-title text-left"> {{specialization.name}}</h5>
         <p class="card-text text-left text-secondary desc">{{specialization.description}}</p>
@@ -15,6 +15,11 @@
 export default {
   name: 'Specialization',
   props: ['specialization'],
+  methods: {
+    toDoctorList() {
+      this.$store.dispatch('toDoctorList');
+    },
+  },
 };
 </script>
 

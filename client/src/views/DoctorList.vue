@@ -3,7 +3,7 @@
     <div class="header">
       <div class="row mt-2" style="background-color:white">
         <div class="col-2 align-self-center back">
-          <ion-icon name="arrow-back-outline" size="large"></ion-icon>
+          <ion-icon @click="backSpecialist()" name="arrow-back-outline" size="large"></ion-icon>
         </div>
         <div class="col">
           <p class="left locTitle"> Dokter di Sekitar </p>
@@ -45,6 +45,11 @@ export default {
   },
   created() {
     this.$store.dispatch('getDoctor');
+  },
+  methods: {
+    backSpecialist() {
+      this.$store.dispatch('toSpecialist');
+    },
   },
 };
 </script>

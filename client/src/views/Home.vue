@@ -111,7 +111,7 @@ export default {
   name: 'Home',
   methods: {
     goToSpecialist() {
-      console.log('masuk');
+      this.$store.dispatch('toSpecialist');
       // routers.push('/specialist');
     },
   },

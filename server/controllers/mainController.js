@@ -24,6 +24,17 @@ class MainController{
     })
   }
 
+  static findOneDoctor(req,res, next){
+    Doctor.findOne({where: {id: req.params.doctorId}})
+    .then( data => {
+      return res.status(200).json(data)
+    })
+    .catch ( err => {
+      console.log(err)
+      return res.status(500).json(err)
+    })
+  }
+
   static findOneWorkPlace(req,res, next){
     Work_Place.findOne({where: {DoctorId: req.params.doctorId},include: ["Hospital", "Doctor"]})
     .then( data => {
@@ -58,7 +69,7 @@ class MainController{
   }
 
   static viewSpecialties(req,res, next){
-    Specialty.findAll({include: ["Skill", "Doctor"]})
+    Specialty.findAll({where: {DoctorId: req.params.doctorId}, include: ["Skill", "Doctor"]})
     .then( data => {
         return res.status(200).json(data)
     })
@@ -69,7 +80,7 @@ class MainController{
   }
 
   static viewDiseasesSpecialties(req,res, next){
-    Disease_Specialty.findAll({include: ["Disease", "Doctor"]})
+    Disease_Specialty.findAll({where: {DoctorId: req.params.doctorId}, include: ["Disease", "Doctor"]})
     .then( data => {
         return res.status(200).json(data)
     })

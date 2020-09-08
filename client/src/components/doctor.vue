@@ -1,5 +1,5 @@
 <template>
-  <div class="row bg-white ml-4 mb-3 pt-3 mr-4 pr-2 borderBot">
+  <div @click="toDoctorDetail(doctor.id)" class="row bg-white ml-4 mb-3 pt-3 mr-4 pr-2 borderBot">
       <div class="col-9" style="padding-right: 0px">
         <h5 class="card-title text-left doctorName"> {{doctor.name}}</h5>
         <div class="row">
@@ -37,10 +37,14 @@ export default {
   props: ['doctor'],
   created() {
     if (this.doctor) {
-      console.log(this.doctor.id, 'masuk');
       this.$store.dispatch('getOneHospital', this.doctor.id);
       this.$store.dispatch('getOnePracticeTime', this.doctor.id);
     }
+  },
+  methods: {
+    toDoctorDetail(doctorId) {
+      this.$store.dispatch('toDoctorDetail', doctorId);
+    },
   },
 };
 </script>
