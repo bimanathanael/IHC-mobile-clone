@@ -25,7 +25,7 @@ module.exports = {
       updatedAt: new Date(),
     },
     {
-      DoctorId: 1,
+      DoctorId: 3,
       HospitalId: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
