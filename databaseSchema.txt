@@ -1,7 +1,7 @@
 table Doctors: id, name, photo, gender, type_id, hospital_id 
 table Hospitals: id, name, location_id, full_address
 table Practice_times: id, day, time
-table Doctor_Types: id, name
+table Doctor_Types: id, name, description
 table Skills: id, name
 table Diseases: id, name
 table Locations: id, name

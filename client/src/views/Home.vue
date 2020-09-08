@@ -1,6 +1,6 @@
 <template>
   <div class="home" >
-    <div class=" container">
+    <div class="container">
       <div class="row">
         <img class="logo" src="../assets/logo_ihc.png"/>
       </div>
