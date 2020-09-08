@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Docktor_Practice_Time.belongsTo(models.Doctor)
+      Docktor_Practice_Time.belongsTo(models.Practice_time)
     }
   };
   Docktor_Practice_Time.init({

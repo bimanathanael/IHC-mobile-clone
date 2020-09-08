@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Specialty.belongsTo(models.Doctor)
+      Specialty.belongsTo(models.Skill)
     }
   };
   Specialty.init({

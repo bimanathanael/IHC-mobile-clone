@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Practice_time.belongsToMany(models.Doctor, {through : "Docktor_Practice_Times"})
       // define association here
     }
   };

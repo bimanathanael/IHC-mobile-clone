@@ -11,6 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Doctor.hasOne(models.Doctor_Type)
+      Doctor.belongsToMany(models.Hospital, {through : "Work_Places"})
+      Doctor.belongsToMany(models.Skill, {through : "Specialties"})
+      Doctor.belongsToMany(models.Diseases, {through : "Disease_Specialties"})
+      Doctor.belongsToMany(models.Practice_time, {through : "Docktor_Practice_Times"})
     }
   };
   Doctor.init({
