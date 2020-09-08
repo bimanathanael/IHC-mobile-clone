@@ -1,0 +1,10 @@
+table Doctors: id, name, photo, gender, type_id, hospital_id 
+table Hospitals: id, name, full_address
+table Doctor_Types: id, name
+table Skills: id, name
+table Diseases: id, name
+table Practice_Times: id, day, time
+table Work_Places: id, doctor_id, hospital_id
+table Specialties: id, doctor_id, skill_id
+table Diseases_Specialists: id, doctor_id, disease_id
+table Doctors_Practice_Times: id, doctor_id, practice_time_id
