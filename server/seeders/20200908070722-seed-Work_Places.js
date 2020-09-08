@@ -13,32 +13,32 @@ module.exports = {
     */
    return queryInterface.bulkInsert('Work_Places', [
     {
-      doctor_id: 1,
-      hospital_id: 1,
+      DoctorId: 1,
+      HospitalId: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 1,
-      hospital_id: 2,
+      DoctorId: 1,
+      HospitalId: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 1,
-      hospital_id: 3,
+      DoctorId: 1,
+      HospitalId: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 2,
-      hospital_id: 4,
+      DoctorId: 2,
+      HospitalId: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 2,
-      hospital_id: 5,
+      DoctorId: 2,
+      HospitalId: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }

@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Docktor_Practice_Time.init({
-    doctor_id: DataTypes.INTEGER,
-    practice_time_id: DataTypes.INTEGER
+    DoctorId: DataTypes.INTEGER,
+    PracticeTimeId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Docktor_Practice_Time',

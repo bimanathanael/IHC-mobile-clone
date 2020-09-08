@@ -9,7 +9,7 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     return queryInterface.addConstraint('Specialties', {
-      fields: ['doctor_id'],
+      fields: ['DoctorId'],
       type: 'foreign key',
       name: 'FK_doctor_id',
       references: { 
@@ -21,7 +21,7 @@ module.exports = {
     })
     .then ( () =>{
       return queryInterface.addConstraint('Specialties', {
-        fields: ['skill_id'],
+        fields: ['SkillId'],
         type: 'foreign key',
         name: 'FK_skill_id',
         references: { 

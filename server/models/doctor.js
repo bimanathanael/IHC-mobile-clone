@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Doctor.hasOne(models.Doctor_Type)
+      // Doctor.hasOne(models.Doctor_Type, {foreignKey: 'type_id', foreignKeyConstraint: true })
       Doctor.belongsToMany(models.Hospital, {through : "Work_Places"})
       Doctor.belongsToMany(models.Skill, {through : "Specialties"})
       Doctor.belongsToMany(models.Diseases, {through : "Disease_Specialties"})
@@ -22,8 +22,8 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     photo: DataTypes.TEXT,
     gender: DataTypes.STRING,
-    type_id: DataTypes.INTEGER,
-    hospital_id: DataTypes.INTEGER
+    TypeId: DataTypes.INTEGER,
+    HospitalId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Doctor',

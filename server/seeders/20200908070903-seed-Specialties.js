@@ -13,32 +13,32 @@ module.exports = {
     */
    return queryInterface.bulkInsert('Specialties', [
     {
-      doctor_id: 1,
-      skill_id: 1,
+      DoctorId: 1,
+      SkillId: 1,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 1,
-      skill_id: 2,
+      DoctorId: 1,
+      SkillId: 2,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 1,
-      skill_id: 3,
+      DoctorId: 1,
+      SkillId: 3,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 2,
-      skill_id: 4,
+      DoctorId: 2,
+      SkillId: 4,
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      doctor_id: 2,
-      skill_id: 5,
+      DoctorId: 2,
+      SkillId: 5,
       createdAt: new Date(),
       updatedAt: new Date(),
     }

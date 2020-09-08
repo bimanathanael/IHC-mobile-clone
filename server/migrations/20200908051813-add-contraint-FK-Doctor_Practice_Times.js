@@ -9,7 +9,7 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     return queryInterface.addConstraint('Docktor_Practice_Times', {
-      fields: ['doctor_id'],
+      fields: ['DoctorId'],
       type: 'foreign key',
       name: 'FK_doctor_id2',
       references: { 
@@ -21,7 +21,7 @@ module.exports = {
     })
     .then ( () =>{
       return queryInterface.addConstraint('Docktor_Practice_Times', {
-        fields: ['practice_time_id'],
+        fields: ['PracticeTimeId'],
         type: 'foreign key',
         name: 'FK_practice_time_id',
         references: { 

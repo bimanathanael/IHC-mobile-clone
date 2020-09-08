@@ -17,10 +17,10 @@ module.exports = {
       gender: {
         type: Sequelize.STRING
       },
-      type_id: {
+      TypeId: {
         type: Sequelize.INTEGER
       },
-      hospital_id: {
+      HospitalId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

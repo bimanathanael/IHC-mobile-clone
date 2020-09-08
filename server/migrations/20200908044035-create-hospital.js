@@ -11,10 +11,10 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      location_id: {
+      LocationId: {
         type: Sequelize.INTEGER
       },
-      full_address: {
+      fullAddress: {
         type: Sequelize.STRING
       },
       createdAt: {

@@ -9,11 +9,11 @@ module.exports = {
      * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
      */
     return queryInterface.addConstraint('Doctors', {
-      fields: ['hospital_id'],
+      fields: ['HospitalId'],
       type: 'foreign key',
       name: 'FK_hospital_id',
       references: { 
-        table: 'Doctor_Types',
+        table: 'Hospitals',
         field: 'id'
       },
       onDelete: 'cascade',
