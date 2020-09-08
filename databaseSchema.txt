@@ -1,9 +1,9 @@
 table Doctors: id, name, photo, gender, type_id, hospital_id 
-table Hospitals: id, name, full_address
-table Doctor_Types: id, name
+table Hospitals: id, name, location_id, full_address
+table Practice_Times: id, day, time
 table Skills: id, name
 table Diseases: id, name
-table Practice_Times: id, day, time
+table Locations: id, name
 table Work_Places: id, doctor_id, hospital_id
 table Specialties: id, doctor_id, skill_id
 table Diseases_Specialists: id, doctor_id, disease_id
